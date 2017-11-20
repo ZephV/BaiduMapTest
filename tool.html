@@ -2,39 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>老司机の专用工具</title>
 </head>
 <body>
-	<h1>老司机专用工具</h1>
+	<h1>老司机の专用工具</h1>
 	<div class="container">
-		<b>迅雷磁力链接码</b><input id="thunder-magnet-input" type="text">
-		<button id="thunder-copy" onclick="thunder_magnet()">转化</button>
-		<a id="show-text-thunder"></div>
+		<b>迅雷磁力链接码</b><input id="thunder-inputTxt" type="text">
+		<button onclick="ChangeToDownloadURL('thunder')">转化</button>
+		<a id="thunder-showResult"></div>
 	</div>
 
-
 	<div class="container">
-		<b>百度云码</b><input id="baiduyun" type="text">
-		<button id="baiduyun-copy" onclick="baiduyunma()">转化</button>
-		<a href="#" id="show-text-baiduyun"></div>
+		<b>百度云码</b><input id="baiduyun-inputTxt" type="text">
+		<button onclick="ChangeToDownloadURL('baiduyun')">转化</button>
+		<a id="baiduyun-showResult"></div>
 	</div>
 </body>
 
 <script>
+	function ChangeToDownloadURL(download_tool_name){
 
-	function thunder_magnet (){
-		var txt = document.getElementById('thunder-magnet-input').value;
-		var show = document.getElementById('show-text-thunder');
-		var b = show.innerHTML = "magnet:?xt=urn:btih:"+txt;
+		// 根据规定的方式结合工具名获取输入框及显示框的Id
+		var inputTxtId = download_tool_name + '-inputTxt'; 
+		var showResultId = download_tool_name + '-showResult';
+
+		// 通过dom获取id地址的方式获取到输入文本的内容
+		var inputTxt = document.getElementById(inputTxtId).value;
+		// 通过dom获取id地址的方式获取到显示区
+		var showResult = document.getElementById(showResultId);
+
+		// 判断输入的内容长度是否小于等于0或者是否为空值或者空格
+		if (inputTxt.length <= 0 || inputTxt.trim() == "") {
+			alert('请输入内容,谢谢');
+		}else {
+			// 根据选择的工具名选择转换的方式
+			switch(download_tool_name){
+				case 'thunder':
+					showResult['href'] = showResult.innerHTML = "magnet:?xt=urn:btih:"+inputTxt;
+				break;
+
+				case 'baiduyun':
+				 	showResult['href'] = showResult.innerHTML = "http://yun.baidu.com/s/" + inputTxt;
+				break;
+			}
+		}
+		
+
 	}
-
-	function baiduyunma (){
-		var txt = document.getElementById('baiduyun').value;
-		var show = document.getElementById('show-text-baiduyun');
-		var b = show.innerHTML = "http://yun.baidu.com/s/"+txt;
-		show['href'] = b;
-	}
-
-
 </script>
 </html>
