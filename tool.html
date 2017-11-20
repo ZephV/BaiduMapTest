@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>老司机专用工具</h1>
+	<div class="container">
+		<b>迅雷磁力链接码</b><input id="thunder-magnet-input" type="text">
+		<button id="thunder-copy" onclick="thunder_magnet()">转化</button>
+		<a id="show-text-thunder"></div>
+	</div>
+
+
+	<div class="container">
+		<b>百度云码</b><input id="baiduyun" type="text">
+		<button id="baiduyun-copy" onclick="baiduyunma()">转化</button>
+		<a href="#" id="show-text-baiduyun"></div>
+	</div>
+</body>
+
+<script>
+
+	function thunder_magnet (){
+		var txt = document.getElementById('thunder-magnet-input').value;
+		var show = document.getElementById('show-text-thunder');
+		var b = show.innerHTML = "magnet:?xt=urn:btih:"+txt;
+	}
+
+	function baiduyunma (){
+		var txt = document.getElementById('baiduyun').value;
+		var show = document.getElementById('show-text-baiduyun');
+		var b = show.innerHTML = "http://yun.baidu.com/s/"+txt;
+		show['href'] = b;
+	}
+
+
+</script>
+</html>
