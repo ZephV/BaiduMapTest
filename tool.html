@@ -3,20 +3,90 @@
 <head>
 	<meta charset="UTF-8">
 	<title>老司机の专用工具</title>
+
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin:0 auto;
+			position: relative;
+		}
+
+		header{
+			max-width: 100%;
+			background-color: #a71111;
+			text-align: center;
+			padding:10px 0; 
+			color: #fff;
+		}
+
+		.wrap{
+			max-width: 800px;
+			height: 200px;
+			padding: 20px
+		}
+
+		.container{
+			padding: 15px 20px;
+			margin-top: 5px;
+			background-color: rgba(250, 250, 27, 0.6);
+			border:1px solid #ccc;
+			border-radius: 3px;
+			box-shadow: 1px 1px 1px;
+		}
+
+		.tool-name{
+			font-weight: bold;
+			font-size: 16px;
+			display: block;
+		}
+
+		.inputTxt:focus, .change-button:focus{
+			outline: none;
+		}
+
+		.inputTxt{
+			height: 20px;
+			padding:2px 5px;
+			margin-top: 5px;
+		}
+
+		.change-button:hover{
+			cursor:pointer;
+			background: #ccc;
+		}
+
+		.change-button{
+			width: 60px;
+			height: 28px;
+			border:1px solid #ccc;
+			background: #eee;
+			color: #222;
+		}
+
+		.showResult{
+			font-size: 14px;
+		}
+
+
+	</style>
 </head>
 <body>
-	<h1>老司机の专用工具</h1>
-	<div class="container">
-		<b>迅雷磁力链接码</b><input id="thunder-inputTxt" type="text">
-		<button onclick="ChangeToDownloadURL('thunder')">转化</button>
-		<a id="thunder-showResult"></div>
+	<header><h1>老司机の专用工具</h1></header>
+	<div class="wrap">
+		<div class="container">
+			<span class="tool-name">迅雷磁力链接特征码</span>
+			<input id="thunder-inputTxt" class="inputTxt" type="text">
+			<button class="change-button" onclick="ChangeToDownloadURL('thunder')">转化</button>
+			<a id="thunder-showResult" class="showResult">
+		</div>
+		<div class="container">
+			<span class="tool-name">百度云特征码</span>
+			<input id="baiduyun-inputTxt" class="inputTxt" type="text">
+			<button class="change-button" onclick="ChangeToDownloadURL('baiduyun')">转化</button>
+			<a id="baiduyun-showResult" class="showResult"></div>
+		</div>
 	</div>
 
-	<div class="container">
-		<b>百度云码</b><input id="baiduyun-inputTxt" type="text">
-		<button onclick="ChangeToDownloadURL('baiduyun')">转化</button>
-		<a id="baiduyun-showResult"></div>
-	</div>
 </body>
 
 <script>
@@ -47,7 +117,6 @@
 			}
 		}
 		
-
 	}
 </script>
 </html>
