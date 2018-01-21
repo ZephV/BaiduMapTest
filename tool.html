@@ -1,61 +1,67 @@
+0
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>老司机の专用工具</title>
-	<link rel="stylesheet" href="css/kit.css">
+    <meta charset="UTF-8">
+    <title>老司机の专用工具</title>
+    <link rel="stylesheet" href="css/kit.css">
 </head>
+
 <body>
-	<header><h1>老司机の专用工具</h1></header>
-	<div class="wrap">
-		<div class="container">
-			<span class="tool-name">磁力链接特征码</span>
-			<div class="writebox">
-				<input id="magnet-inputTxt" class="inputTxt" type="text">
-				<button class="change-button" onclick="ChangeToDownloadURL('magnet')">转化</button>
-			</div>
-			<a id="magnet-showResult" class="showResult">
-		</div>
-		<div class="container">
-			<span class="tool-name">百度云特征码</span>
-			<div class="writebox">
-				<input id="baiduyun-inputTxt" class="inputTxt" type="text">
-				<button class="change-button" onclick="ChangeToDownloadURL('baiduyun')">转化</button>
-			</div>
-			<a id="baiduyun-showResult" class="showResult"></div>
-		</div>
-	</div>
+    <header>
+        <h1>老司机の专用工具</h1>
+    </header>
+    <div class="wrap">
+        <div class="container">
+            <span class="tool-name">磁力链接特征码</span>
+            <div class="writebox">
+                <input id="magnet-inputTxt" class="inputTxt" type="text">
+                <button class="change-button" onclick="ChangeToDownloadURL('magnet')">转化</button>
+            </div>
+            <a id="magnet-showResult" class="showResult"></a>
+        </div>
+        <div class="container">
+            <span class="tool-name">百度云特征码</span>
+            <div class="writebox">
+                <input id="baiduyun-inputTxt" class="inputTxt" type="text">
+                <button class="change-button" onclick="ChangeToDownloadURL('baiduyun')">转化</button>
+            </div>
+            <a id="baiduyun-showResult" class="showResult"></a>
+        </div>
+    </div>
 
 </body>
 
 <script>
-	function ChangeToDownloadURL(download_tool_name){
+    function ChangeToDownloadURL(download_tool_name) {
 
-		// 根据规定的方式结合工具名获取输入框及显示框的Id
-		var inputTxtId = download_tool_name + '-inputTxt'; 
-		var showResultId = download_tool_name + '-showResult';
+        // 根据规定的方式结合工具名获取输入框及显示框的Id
+        var inputTxtId = download_tool_name + '-inputTxt';
+        var showResultId = download_tool_name + '-showResult';
 
-		// 通过dom获取id地址的方式获取到输入文本的内容
-		var inputTxt = document.getElementById(inputTxtId).value;
-		// 通过dom获取id地址的方式获取到显示区
-		var showResult = document.getElementById(showResultId);
+        // 通过dom获取id地址的方式获取到输入文本的内容
+        var inputTxt = document.getElementById(inputTxtId).value;
+        // 通过dom获取id地址的方式获取到显示区
+        var showResult = document.getElementById(showResultId);
 
-		// 判断输入的内容长度是否小于等于0或者是否为空值或者空格
-		if (inputTxt.length <= 0 || inputTxt.trim() == "") {
-			alert('请输入内容,谢谢');
-		}else {
-			// 根据选择的工具名选择转换的方式
-			switch(download_tool_name){
-				case 'magnet':
-					showResult['href'] = showResult.innerHTML = "magnet:?xt=urn:btih:"+inputTxt;
-				break;
+        // 判断输入的内容长度是否小于等于0或者是否为空值或者空格
+        if (inputTxt.length <= 0 || inputTxt.trim() == "") {
+            alert('请输入内容,谢谢');
+        } else {
+            // 根据选择的工具名选择转换的方式
+            switch (download_tool_name) {
+                case 'magnet':
+                    showResult['href'] = showResult.innerHTML = "magnet:?xt=urn:btih:" + inputTxt;
+                    break;
 
-				case 'baiduyun':
-				 	showResult['href'] = showResult.innerHTML = "http://yun.baidu.com/s/" + inputTxt;
-				break;
-			}
-		}
-		
-	}
+                case 'baiduyun':
+                    showResult['href'] = showResult.innerHTML = "http://yun.baidu.com/s/" + inputTxt;
+                    break;
+            }
+        }
+
+    }
 </script>
+
 </html>
