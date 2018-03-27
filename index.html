@@ -14,23 +14,25 @@
         <h1>老司机の专用工具2.0</h1>
     </header>
     <div class="wrap">
+
         <div class="container">
-            <span class="tool-name">磁力链接特征码</span>
+            <div class="tool_name_wrap"><span class="tool-name">磁力链接特征码</span></div>
             <div class="writebox">
                 <input id="magnet-input" class="input_box" type="text">
                 <button id="magnet" class="change_btn">转化</button>
             </div>
-            <a id="magnet-show" class="show_result"></a>
+            <div><a id="magnet-show" class="show_result">aaaaaaaaaaaaaaaaaaa</a></div>
         </div>
 
         <div class="container">
-            <span class="tool-name">百度云特征码</span>
+            <div class="tool_name_wrap"><span class="tool-name">百度云特征码</span></div>
             <div class="writebox">
                 <input id="baiduyun-input" class="input_box" type="text">
                 <button id="baiduyun" class="change_btn">转化</button>
             </div>
             <a id="baiduyun-show" class="show_result"></a>
         </div>
+
     </div>
 
 
@@ -67,7 +69,6 @@
             for (let i = 0; i < data.length; i++) {
                 if (data[i].tool_name == tool_id) {
                     return data[i].change_rule;
-
                 }
             }
         }

@@ -4,9 +4,14 @@
     position: relative;
 }
 
+body {
+    background-color: #cccccc6b;
+}
+
 header {
     max-width: 100%;
-    background-color: #a71111;
+    /* background-color: #a71111; */
+    background-color: #ccc;
     text-align: center;
     padding: 10px 0;
     color: #fff;
@@ -14,24 +19,30 @@ header {
 
 .wrap {
     max-width: 800px;
-    height: 200px;
     margin: 0 auto;
-    padding: 20px
+    padding: 50px;
 }
 
 .container {
-    padding: 15px 20px;
+    width: 500px;
+    height: 90px;
+    text-align: center;
+    margin: 10px auto;
+    background-color: rgba(153, 153, 153, 0.4);
+    border: 1px solid rgba(153, 153, 153, 0.1);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(171, 160, 160, 0.8);
+}
+
+.tool_name_wrap {
     margin-top: 5px;
-    background-color: rgba(250, 250, 27, 0.6);
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 1px 1px 1px;
 }
 
 .tool-name {
     font-weight: bold;
     font-size: 16px;
-    display: block;
+    background: #aaa;
+    color: #f7f0f0;
 }
 
 .writebox {
@@ -57,7 +68,8 @@ header {
 
 .change_btn:hover {
     cursor: pointer;
-    background: #ccc;
+    background: #000;
+    color: #fff;
 }
 
 .change_btn {
