@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>老司机の专用工具2.0</title>
-    <link rel="stylesheet" href="css/kit.1.css">
+    <title>特征码转换工具2.1</title>
+    <link rel="stylesheet" href="css/kit.css">
 </head>
 
 <body>
     <header>
-        <h1>老司机の专用工具2.0</h1>
+        <h1>特征码转换工具2.1</h1>
     </header>
     <div class="wrap">
 
@@ -21,7 +21,7 @@
                 <input id="magnet-input" class="input_box" type="text">
                 <button id="magnet" class="change_btn">转化</button>
             </div>
-            <div><a id="magnet-show" class="show_result">aaaaaaaaaaaaaaaaaaa</a></div>
+            <div class="showbox"><a id="magnet-show" class="show_result">转换结果在这里呀</a></div>
         </div>
 
         <div class="container">
@@ -30,7 +30,7 @@
                 <input id="baiduyun-input" class="input_box" type="text">
                 <button id="baiduyun" class="change_btn">转化</button>
             </div>
-            <a id="baiduyun-show" class="show_result"></a>
+            <div class="showbox"><a id="baiduyun-show" class="show_result">转换结果在这里呀</a></div>
         </div>
 
     </div>
@@ -46,7 +46,7 @@
             change_rule: "magnet:?xt=urn:btih:"
         }, ];
 
-        $(".change_btn").click(function(e) {
+        $(".change_btn").click(function (e) {
             let tool_id = e.target.id; // 触发事件的按钮
             let tool_input = "#" + tool_id + "-input"; // 触发事件的输入框
             let tool_input_txt = $(tool_input).val(); // 用户在输入框输入的内容

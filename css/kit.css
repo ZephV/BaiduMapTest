@@ -1,74 +1,96 @@
-
-*{
-	padding: 0;
-	margin:0;
-	position: relative;
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
 
-header{
-	max-width: 100%;
-	background-color: #a71111;
-	text-align: center;
-	padding:10px 0; 
-	color: #fff;
+body {
+    background-color: #cccccc6b;
 }
 
-.wrap{
-	max-width: 800px;
-	height: 200px;
-	margin: 0 auto;
-	padding: 20px
+header {
+    max-width: 100%;
+    /* background-color: #a71111; */
+    background-color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
 }
 
-.container{
-	padding: 15px 20px;
-	margin-top: 5px;
-	background-color: rgba(250, 250, 27, 0.6);
-	border:1px solid #ccc;
-	border-radius: 3px;
-	box-shadow: 1px 1px 1px;
+.wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
 }
 
-.tool-name{
-	font-weight: bold;
-	font-size: 16px;
-	display: block;
+.container {
+    width: 500px;
+    height: 145px;
+    text-align: center;
+    margin: 34px auto;
+    background-color: #7f614670;
+    border: 1px solid rgba(153, 153, 153, 0.1);
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(124, 101, 101, 0.8);
 }
 
-.writebox{
-	display: inline-block;
-	margin-top: 5px;
-	width: 300px;
-	height: 28px;
-	background: #fff;
-	border:1px solid #eee;
+.tool_name_wrap {
+    margin-top: 10px;
 }
 
-.inputTxt:focus, .change-button:focus{
-	outline: none;
+.tool-name {
+    font-weight: bold;
+    font-size: 16px;
+    /* background: #aaa; */
+    color: #f7f0f0;
+    text-shadow: 2px 3px 3px rgba(73, 62, 62, 0.8);
 }
 
-.inputTxt{
-	height: 25px;
-	width: 200px;
-	margin-left: 5px;
-	border:none;
+.writebox {
+    display: inline-block;
+    margin-top: 15px;
+    width: 408px;
+    height: 28px;
+    background: #fff;
+    border: 1px solid #eee;
 }
 
-.change-button:hover{
-	cursor:pointer;
-	background: #ccc;
+.input_box:focus,
+.change_btn:focus {
+    outline: none;
 }
 
-.change-button{
-	float: right;
-	width: 90px;
-	height: 28px;
-	border:none;
-	background: #eee;
-	color: #222;
+.input_box {
+    height: 28px;
+    width: 300px;
+    /* margin-left: 5px; */
+    border: none;
 }
 
-.showResult{
-	font-size: 14px;
+.change_btn:hover {
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+.change_btn {
+    float: right;
+    width: 90px;
+    height: 28px;
+    border: none;
+    background: #cccccc;
+    color: #222;
+}
+
+.show_result {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.showbox {
+    width: 470px;
+    overflow:hidden;
+    margin: 12px 10px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
